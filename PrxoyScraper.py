@@ -33,7 +33,7 @@ try:
 
         # Save the proxy information to a file
         with open("proxy.txt", "w") as file:
-            file.write("\n'".join(proxies))
+            file.write("\n".join(proxies))
 
         print("Proxy information saved to 'proxy.txt' file.")
     else:
