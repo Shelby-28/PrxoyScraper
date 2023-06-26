@@ -35,11 +35,11 @@ try:
         with open("proxy.txt", "w") as file:
             file.write("\n".join(proxies))
 
-        print("Proxy information saved to 'proxy.txt' file.")
+        print("\n[+]Proxy information saved to 'proxy.txt' file.\n")
     else:
-        raise Exception("No table rows found containing proxy information.")
+        raise Exception("[-] No table rows found containing proxy information.")
 
 except requests.exceptions.RequestException as e:
-    print(f"Error: Failed to retrieve text from {url}. Exception: {e}")
+    print(f"[-] Error: Failed to retrieve text from {url}. Exception: {e}")
 except Exception as e:
-    print(f"Error: {e}")
+    print(f"[-] Error: {e}")
